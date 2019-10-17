@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/listFragment">
+
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.kotlinjetpack.ui.fragment.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_blank">
+        <action
+            android:id="@+id/go_fragment1"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.kotlinjetpack.ui.fragment.DetailFragment"
+        android:label="DetailFragment">
+
+        <action
+            android:id="@+id/go_fragment2"
+            app:destination="@id/meFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/meFragment2"
+        android:name="com.example.kotlinjetpack.ui.fragment.MeFragment"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me">
+        <action
+            android:id="@+id/go_fragment3"
+            app:destination="@id/listFragment" />
+    </fragment>
+</navigation>
